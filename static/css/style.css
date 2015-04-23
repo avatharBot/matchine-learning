@@ -1,0 +1,49 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    font-family: 'Lato';
+}
+
+.jumbotron{
+    margin-top: 100px;
+    background-color: rgba(222,222,222,0.6);
+    color: black;
+}
+
+.jumbotron h1{
+    font-family: 'Cinzel';
+    font-weight: 700;
+    color: goldenrod;
+    -webkit-text-stroke: 2px midnightblue;
+    text-shadow: black 3px 3px 7px;
+}
+
+.jumbotron p {
+    margin-left: 80px;
+}
+
+.data-header{
+    background: #393939;
+    margin-top: 100px;
+    text-align: center;
+    color: ghostwhite;
+}
+
+.centroid{
+    display: block;
+    background-color: aquamarine;
+}
+
+
+footer{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    line-height: 50px;
+    background-color: ghostwhite;
+}
