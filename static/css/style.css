@@ -43,6 +43,14 @@ body{
 
 }
 
+#results{
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 80px;
+}
+
 .jumbotron{
     margin-top: 100px;
     background-color: rgba(222,222,222,0.6);
