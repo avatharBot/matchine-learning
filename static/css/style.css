@@ -2,9 +2,45 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-family: 'Lato';
+    height: 100%;
+}
+
+body{
+    padding-bottom: 50px;
+}
+
+.navbar{
+    border-radius: 0;
+    background-color: ghostwhite;
+    margin-bottom: 0;
+}
+
+.navbar-brand{
+    height: 80px;
+}
+.navbar-brand > img{
+    height: 50px;
+    display: inline-block;
+}
+
+.nav-title{
+    font-family: 'Cinzel';
+    font-weight: 400;
+    line-height: 50px;
+    font-size: 1.4em;
+    color: goldenrod;
+    -webkit-text-stroke: 2px midnightblue;
+    text-shadow: black 1px 1px 2px;
+
+}
+
+#main-page{
     background-image: url('../img/bg.jpg');
     background-size: cover;
-    font-family: 'Lato';
+    height: 100%;
+    padding-bottom: 80px;
+
 }
 
 .jumbotron{
@@ -25,24 +61,50 @@ html, body {
     margin-left: 80px;
 }
 
+.match-input{
+
+}
+
+textarea{
+    resize: none;
+}
+
+.ninja{
+    display: none;
+}
+
 .data-header{
-    background: #393939;
+    font-family: 'Cinzel';
+    background: ghostwhite;
     margin-top: 100px;
     text-align: center;
-    color: ghostwhite;
+    color: #393939;
 }
 
-.centroid{
-    display: block;
-    background-color: aquamarine;
+.centroid > span {
+    margin: 0 5px;
 }
 
+div.champion{
+    display: inline-block;
+    padding: 5px;
+    width: 126px;
+    text-align: right;
+    line-height: 32px;
+}
+
+div.champion > img.icon {
+    width: 32px;
+    height: 32px;
+    float: right;
+    margin-left: 5px;
+}
 
 footer{
     width: 100%;
     height: 50px;
-    position: absolute;
     bottom: 0;
+    position: fixed;
     text-align: center;
     line-height: 50px;
     background-color: ghostwhite;

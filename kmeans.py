@@ -10,7 +10,7 @@ class KMeans(object):
         if dataset is None:
             self.mega_dataset = json.loads(open(file_path + '\\dataset.json', 'r').read())
         else:
-            self.dataset = json.loads(open(dataset, 'r').read())
+            self.mega_dataset = json.loads(dataset)
 
     def _ED(self, point1, point2):
         result = 0

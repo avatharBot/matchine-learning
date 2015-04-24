@@ -1,49 +1,48 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
+{% extends 'base.html' %}
 
-    <title>Matchine Learning</title>
-
-    <meta charset="UTF-8">
-    <link href='http://fonts.googleapis.com/css?family=Cinzel:700,400'
-          rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato:700,400'
-          rel='stylesheet' type='text/css'>
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/css/style.css"/>
-    <link rel="icon" href="/static/img/icon.png"/>
-</head>
-<body>
-
-
-<div class="content">
-    <div class="container">
-        <div class="jumbotron">
-        	<div class="container">
-        		<h1>Welcome to Matchine Learning</h1>
-        		<p>A tool to analyze champion performance on games. </p>
-                <p> Enter some of your match Id to get information for all the champions on those games.
-                    <br/> The more the merrier!
-                </p>
-                <p> Or just click the other button to check our data gathered from URF games. </p>
-        		<div class="row">
-                    <div class="col-md-4 col-sm-offset-2">
-                        <a class="btn btn-primary btn-lg"> Check my games </a>
+{% block content %}
+    <div class="content" id="main-page" xmlns="http://www.w3.org/1999/html"
+         xmlns="http://www.w3.org/1999/html">
+        <div class="container">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1>Welcome to Matchine Learning</h1>
+                    <p>A tool to analyze champion performance on games. </p>
+                    <p> Enter some of your match Id to get information for all the champions on those games.
+                        <br/> The more the merrier!
+                    </p>
+                    <p> Or just click the other button to check our data gathered from URF games. </p>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-offset-2">
+                            <a class="btn btn-primary btn-lg games"> Check my games </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a class="btn btn-primary btn-lg" href="urf"> Analize URF
+                                Games </a>
+                        </div>
                     </div>
-                    <div class="col-sm-4">
-                        <a class="btn btn-primary btn-lg" href="urf"> Analize URF
-                            Games </a>
+                </div>
+            </div>
+            <div class="match-input">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="well">
+                            <form action="/results/" method="post" id="games-form">
+                                <h4> Enter matches id. Separated by commas </h4>
+                                <textarea name="matches" id="matches" cols="92"
+                                          rows="3"></textarea>
+                                <textarea class="ninja" name="stats" id="stats"></textarea>
+                                <div class="col-md-offset-9">
+                                    <input class="btn btn-primary btn-lg" id="start" name="start" type="submit">
+                                        Analyze Data!
+                                    </input>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-        		</div>
-        	</div>
+                </div>
+
+            </div>
         </div>
     </div>
-</div>
-
-<footer>
-    2015 | Ricardo Iván & Guilherme Carvalho
-</footer>
-
-</body>
-</html>
+{% endblock %}
