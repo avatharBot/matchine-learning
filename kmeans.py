@@ -1,14 +1,15 @@
 import json
 import math
 import random
-import  sys
 import os
+
+
 class KMeans(object):
     # TO-DO: Richard
     def __init__(self, dataset=None):
-        file_path  = os.path.dirname(os.path.realpath(__file__))
+        file_path = os.path.dirname(os.path.realpath(__file__))
         if dataset is None:
-            self.mega_dataset = json.loads(open(file_path + '\\dataset.json', 'r').read())
+            self.mega_dataset = json.loads(open(file_path + '/dataset.json', 'r').read())
         else:
             self.mega_dataset = json.loads(dataset)
 
